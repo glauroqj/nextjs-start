@@ -2,6 +2,7 @@
   "name": "nextjs-start",
   "version": "0.1.0",
   "private": true,
+  "author": "Glauro Q Juliani",
   "scripts": {
     "----- DOCKER HELPERS -----": "",
     "delete-all": "yarn delete-containers && yarn delete-images && yarn delete-volumes",
@@ -12,16 +13,18 @@
     "dev-start": "docker-compose up -d --build && docker ps && yarn dev-logs",
     "dev-stop": "docker-compose stop && docker ps",
     "dev-restart": "yarn dev-stop && yarn dev-start",
-    "dev-logs": "docker logs -f node_with_redis",
+    "dev-logs": "docker logs -f nextjs_start",
     "----- COMMANDS RUNNES INSIDE DOCKER -----": "",
     "dev": "cd src/ && next dev",
     "build": "cd src/ && next build",
     "start": "cd src/ && next start"
   },
   "dependencies": {
+    "connect-redis": "^5.1.0",
     "next": "^10.0.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "redis": "^3.0.2",
     "styled-components": "^5.2.1",
     "styled-reset": "^4.3.4"
   }
