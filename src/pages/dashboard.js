@@ -1,23 +1,27 @@
 import Head from 'next/head'
+/** container */
+import ProtectedLayout from 'containers/ProtectedLayout'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
-
-  console.log('< DASHBOARD > ', process.env.APP_ENVIRONMENT)
-
+const Dashboard = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App - Test</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <ProtectedLayout>
+      <div className={styles.container}>
+        <Head>
+          <title>Create Next App - Test</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          DASHBOARD ROUTE - PROTECTED
-        </h1>
-      </main>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            DASHBOARD PAGE - PROTECTED
+          </h1>
 
-    </div>
+        </main>
+
+      </div>
+    </ProtectedLayout>
   )
 }
+
+export default Dashboard

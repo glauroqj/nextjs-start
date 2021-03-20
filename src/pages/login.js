@@ -1,23 +1,27 @@
 import Head from 'next/head'
+/** container */
+import Layout from 'containers/Layout'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
-
-  console.log('< LOGIN > ', process.env.APP_ENVIRONMENT)
-
+const Login = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App - Test</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout>
+      <div className={styles.container}>
+        <Head>
+          <title>Create Next App - Test</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          LOGIN ROUTE
-        </h1>
-      </main>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+            LOGIN PAGE
+          </h1>
 
-    </div>
+        </main>
+
+      </div>
+    </Layout>
   )
 }
+
+export default Login
