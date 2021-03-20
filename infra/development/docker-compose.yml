@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+ nextjs_react:
+    container_name: nextjs_react
+    working_dir: /app
+    build:
+      context: ./
+      dockerfile: ./infra/development/Dockerfile
+    depends_on: 
+        - redis_container
+    links:
+        - redis_container
+    volumes:
+      - ./:/app
+    env_file:
+      - ./infra/development/.env
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+
+ redis_container:
+    container_name: redis_container
+    image: redis:6.0.6-alpine
+    ports:
+      - '6379:6379'
+    links: 
+      - redis_commander_container
+
+ redis_commander_container:
+    container_name: redis_commander_container
+    image: rediscommander/redis-commander:latest
+    restart: always
+    ports:
+        - "3001:8081"
+    environment:
+      - REDIS_HOSTS=redis_container
