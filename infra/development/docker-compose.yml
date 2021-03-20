@@ -1,7 +1,7 @@
 version: "3.7"
 services:
- nextjs_react:
-    container_name: nextjs_react
+ nextjs_start:
+    container_name: nextjs_start
     working_dir: /app
     build:
       context: ./
