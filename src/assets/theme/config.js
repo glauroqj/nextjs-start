@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import commonGlobalStyle from './commonGlobalStyle'
+import commonGlobalStyle from './global'
 
 const Breakpoints = {
   xs: '640px',

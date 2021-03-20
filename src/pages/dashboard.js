@@ -5,14 +5,14 @@ import ProtectedLayout from '../containers/ProtectedLayout'
 const Dashboard = () => {
   return (
     <ProtectedLayout>
-      <div className={styles.container}>
+      <div>
         <Head>
           <title>Create Next App - Test</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
-          <h1 className={styles.title}>
+        <main>
+          <h1>
             DASHBOARD PAGE - PROTECTED
           </h1>
 

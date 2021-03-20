@@ -1,18 +1,18 @@
 import Head from 'next/head'
 /** container */
-import Layout from '../containers/Layout'
+import Layout from 'containers/Layout'
 
 const Login = () => {
   return (
     <Layout>
-      <div className={styles.container}>
+      <div>
         <Head>
           <title>Create Next App - Test</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
-          <h1 className={styles.title}>
+        <main>
+          <h1>
             LOGIN PAGE
           </h1>
 
