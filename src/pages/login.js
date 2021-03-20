@@ -1,7 +1,6 @@
 import Head from 'next/head'
 /** container */
 import Layout from '../containers/Layout'
-import styles from '../styles/Home.module.css'
 
 const Login = () => {
   return (

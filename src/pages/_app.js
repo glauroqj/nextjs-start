@@ -1,6 +1,9 @@
 /** MAIN FILE */
 import { Provider } from 'next-auth/client'
-import '../styles/globals.css'
+/** theme */
+import { ThemeProvider } from 'styled-components'
+import { Reset } from 'styled-reset'
+import { GlobalStyle, Theme } from 'assets/theme'
 
 // Use the <Provider> to improve performance and allow components that call
 // `useSession()` anywhere in your application to access the `session` object.
@@ -26,7 +29,11 @@ const App = ({ Component, pageProps }) => {
       }}
       session={pageProps.session}
     >
-      <Component {...pageProps} />
+      <ThemeProvider theme={Theme}>
+        <GlobalStyle />
+        <Reset />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </Provider>
   )
 }
