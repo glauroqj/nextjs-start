@@ -1,6 +1,6 @@
 import Head from 'next/head'
 /** container */
-import ProtectedLayout from 'containers/ProtectedLayout'
+import ProtectedLayout from '../containers/ProtectedLayout'
 import styles from '../styles/Home.module.css'
 
 const Dashboard = () => {

@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "assets/*": ["src/assets/*"],
-      "containers/*": ["src/containers/*"],
-      "components/*": ["src/components/*"],
-      "server/*": ["src/server/*"]
+      "styles/*": ["/src/styles/*"],
+      "containers/*": ["/src/containers/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
