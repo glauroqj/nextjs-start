@@ -115,7 +115,8 @@ export default NextAuth({
 })
 
 /**
-  DOCs: 
+  DOCs:
+  https://next-auth.js.org/ 
   https://next-auth.js.org/configuration/pages
   https://github.com/nextauthjs/next-auth-example
   https://github.com/nextauthjs/next-auth-example/blob/main/pages/api/auth/%5B...nextauth%5D.js
