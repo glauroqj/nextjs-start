@@ -6,11 +6,6 @@ const Login = () => {
   return (
     <Layout>
       <div>
-        <Head>
-          <title>Create Next App - Test</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
         <main>
           <h1>
             LOGIN PAGE

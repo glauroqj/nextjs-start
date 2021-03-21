@@ -32,7 +32,7 @@ const Spaces = {
 
 const Fonts = {
   default: 'Roboto, sans-serif',
-  secondary: 'Raleway, sans-serif'
+  secondary: 'Open Sans, sans-serif'
 }
 const FontSize = {
   12: '12px',
